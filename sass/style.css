@@ -100,6 +100,8 @@ main .card {
   border-radius: 0.5rem;
   padding: 1.5rem 1rem;
   max-width: 30rem;
+  opacity: 0;
+  animation: ok 0.5s linear forwards;
 }
 main .card span {
   font-size: 4rem;
@@ -134,6 +136,7 @@ main .card button:hover {
 main .card.professional {
   background: linear-gradient(to bottom right, hsl(237, 73%, 79%), hsl(238, 63%, 64%));
   color: hsl(240, 78%, 98%);
+  animation-delay: 0.5s;
 }
 main .card.professional span {
   color: hsl(240, 78%, 98%);
@@ -149,6 +152,9 @@ main .card.professional button:hover {
 }
 main .card.professional hr {
   color: hsl(240, 78%, 98%);
+}
+main .card.master {
+  animation-delay: 1s;
 }
 
 @media screen and (min-width: 768px) {
@@ -167,12 +173,24 @@ main .card.professional hr {
   main .card.basic {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+    animation-delay: 1s;
   }
   main .card.master {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+    animation-delay: 1s;
   }
   main .card.professional {
     padding-block: 3rem;
+  }
+}
+@keyframes ok {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }/*# sourceMappingURL=style.css.map */

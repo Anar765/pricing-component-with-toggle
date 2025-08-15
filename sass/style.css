@@ -27,6 +27,7 @@ body {
 
 header {
   text-align: center;
+  animation: ok 0.5s linear forwards;
 }
 header .pricing_switch {
   display: flex;
@@ -95,7 +96,7 @@ main {
   gap: 2rem;
 }
 main .card {
-  width: 80%;
+  width: 90%;
   background: white;
   border-radius: 0.5rem;
   padding: 1.5rem 1rem;
@@ -133,6 +134,9 @@ main .card button:hover {
   background: transparent;
   color: hsl(238, 63%, 64%);
 }
+main .card.basic {
+  animation-delay: 0.25s;
+}
 main .card.professional {
   background: linear-gradient(to bottom right, hsl(237, 73%, 79%), hsl(238, 63%, 64%));
   color: hsl(240, 78%, 98%);
@@ -154,12 +158,12 @@ main .card.professional hr {
   color: hsl(240, 78%, 98%);
 }
 main .card.master {
-  animation-delay: 1s;
+  animation-delay: 0.75s;
 }
 
 @media screen and (min-width: 768px) {
   body {
-    margin: 0;
+    margin: 0 2vh;
     background: url("../images/bg-top.svg") no-repeat top right, url("../images/bg-bottom.svg") no-repeat bottom left, hsl(240, 78%, 98%);
   }
   main {
@@ -169,6 +173,9 @@ main .card.master {
   main .card {
     padding-inline: 2rem;
     max-width: 22.5rem;
+  }
+  main .card span {
+    font-size: clamp(3rem, 6vw, 4rem);
   }
   main .card.basic {
     border-top-right-radius: 0;
